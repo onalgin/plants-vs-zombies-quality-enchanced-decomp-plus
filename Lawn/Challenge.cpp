@@ -2811,6 +2811,7 @@ void Challenge::InitZombieWaves()
 				aList[ZOMBIE_DOOR] = true;
 				aList[ZOMBIE_SNORKEL] = true;
 				aList[ZOMBIE_DOLPHIN_RIDER] = true;
+				aList[ZOMBIE_FOOTBALL] = true;
 				aList[ZOMBIE_BALLOON] = true;
 			}
 			else if (mSurvivalStage == 8)
@@ -2824,6 +2825,7 @@ void Challenge::InitZombieWaves()
 				aList[ZOMBIE_DOOR] = true;
 				aList[ZOMBIE_SNORKEL] = true;
 				aList[ZOMBIE_DOLPHIN_RIDER] = true;
+				aList[ZOMBIE_FOOTBALL] = true;
 				aList[ZOMBIE_BALLOON] = true;
 				aList[ZOMBIE_JACK_IN_THE_BOX] = true;
 			}
@@ -2838,6 +2840,7 @@ void Challenge::InitZombieWaves()
 				aList[ZOMBIE_DOOR] = true;
 				aList[ZOMBIE_SNORKEL] = true;
 				aList[ZOMBIE_DOLPHIN_RIDER] = true;
+				aList[ZOMBIE_FOOTBALL] = true;
 				aList[ZOMBIE_BALLOON] = true;
 				aList[ZOMBIE_JACK_IN_THE_BOX] = true;
 				aList[ZOMBIE_BUNGEE] = true;
@@ -2853,6 +2856,7 @@ void Challenge::InitZombieWaves()
 				aList[ZOMBIE_DOOR] = true;
 				aList[ZOMBIE_SNORKEL] = true;
 				aList[ZOMBIE_DOLPHIN_RIDER] = true;
+				aList[ZOMBIE_FOOTBALL] = true;
 				aList[ZOMBIE_BALLOON] = true;
 				aList[ZOMBIE_JACK_IN_THE_BOX] = true;
 				aList[ZOMBIE_BUNGEE] = true;
@@ -2869,6 +2873,7 @@ void Challenge::InitZombieWaves()
 				aList[ZOMBIE_DOOR] = true;
 				aList[ZOMBIE_SNORKEL] = true;
 				aList[ZOMBIE_DOLPHIN_RIDER] = true;
+				aList[ZOMBIE_FOOTBALL] = true;
 				aList[ZOMBIE_BALLOON] = true;
 				aList[ZOMBIE_JACK_IN_THE_BOX] = true;
 				aList[ZOMBIE_BUNGEE] = true;
@@ -2886,6 +2891,7 @@ void Challenge::InitZombieWaves()
 				aList[ZOMBIE_DOOR] = true;
 				aList[ZOMBIE_SNORKEL] = true;
 				aList[ZOMBIE_DOLPHIN_RIDER] = true;
+				aList[ZOMBIE_FOOTBALL] = true;
 				aList[ZOMBIE_BALLOON] = true;
 				aList[ZOMBIE_JACK_IN_THE_BOX] = true;
 				aList[ZOMBIE_BUNGEE] = true;
@@ -2893,7 +2899,7 @@ void Challenge::InitZombieWaves()
 				aList[ZOMBIE_CATAPULT] = true;
 				aList[ZOMBIE_DIGGER] = true;
 			}
-			else if (mSurvivalStage >= 14 || mSurvivalStage <= 19)
+			else if (mSurvivalStage >= 14 && mSurvivalStage <= 19)
 			{
 				aList[ZOMBIE_NORMAL] = true;
 				aList[ZOMBIE_TRAFFIC_CONE] = true;
@@ -2904,6 +2910,7 @@ void Challenge::InitZombieWaves()
 				aList[ZOMBIE_DOOR] = true;
 				aList[ZOMBIE_SNORKEL] = true;
 				aList[ZOMBIE_DOLPHIN_RIDER] = true;
+				aList[ZOMBIE_FOOTBALL] = true;
 				aList[ZOMBIE_BALLOON] = true;
 				aList[ZOMBIE_JACK_IN_THE_BOX] = true;
 				aList[ZOMBIE_BUNGEE] = true;
@@ -2923,6 +2930,7 @@ void Challenge::InitZombieWaves()
 				aList[ZOMBIE_DOOR] = true;
 				aList[ZOMBIE_SNORKEL] = true;
 				aList[ZOMBIE_DOLPHIN_RIDER] = true;
+				aList[ZOMBIE_FOOTBALL] = true;
 				aList[ZOMBIE_BALLOON] = true;
 				aList[ZOMBIE_JACK_IN_THE_BOX] = true;
 				aList[ZOMBIE_BUNGEE] = true;
@@ -5363,8 +5371,8 @@ void Challenge::LastStandCompletedStage()
 		mApp->mSoundSystem->GamePause(true);
 		mBoard->FreezeEffectsForCutscene(true);
 		mApp->mGameScene = GameScenes::SCENE_LEVEL_INTRO;
-		mApp->ShowSeedChooserScreen();
 		mBoard->mCutScene->StartLevelIntro();
+		mApp->ShowSeedChooserScreen();
 		mBoard->mSeedBank->UpdateWidth();
 
 		for (int i = 0; i < SEEDBANK_MAX; i++)
